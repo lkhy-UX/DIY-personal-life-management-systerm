@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人工作台</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 顶部工具栏 -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <span class="app-logo">📋</span>
+                <span class="app-title">个人工作台</span>
+                <span class="page-title" id="pageTitle">首页总览</span>
+            </div>
+            <div class="topbar-right">
+                <div class="quick-memo">
+                    <input type="text" id="quickMemoInput" placeholder="快速备忘... (回车保存)" />
+                </div>
+                <button class="icon-btn" id="reminderBtn" title="提醒">
+                    🔔<span class="badge" id="reminderBadge">0</span>
+                </button>
+                <button class="icon-btn" id="settingsBtn" title="设置">⚙</button>
+            </div>
+        </header>
+
+        <div class="main-container">
+            <!-- 左侧导航栏 -->
+            <nav class="sidebar" id="sidebar">
+                <!-- 导航项由JS动态生成 -->
+            </nav>
+
+            <!-- 主内容区 -->
+            <main class="content" id="mainContent">
+                <!-- 模块内容由JS动态渲染 -->
+            </main>
+        </div>
+    </div>
+
+    <!-- 模态框容器 -->
+    <div id="modalContainer"></div>
+
+    <!-- 提示消息 -->
+    <div id="toastContainer"></div>
+
+    <script src="js/db.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/modules/settings.js"></script>
+    <script src="js/modules/weekly.js"></script>
+    <script src="js/modules/tasks.js"></script>
+    <script src="js/modules/health.js"></script>
+    <script src="js/modules/diet.js"></script>
+    <script src="js/modules/knowledge.js"></script>
+    <script src="js/modules/info.js"></script>
+    <script src="js/modules/dev.js"></script>
+    <script src="js/modules/items.js"></script>
+    <script src="js/modules/storage.js"></script>
+    <script src="js/modules/home.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

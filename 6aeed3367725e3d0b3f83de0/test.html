@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试 - 个人工作台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .test-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-result {
+            margin-bottom: 24px;
+        }
+        .test-phase {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+        }
+        .test-case {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: var(--radius);
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+        .test-case.pass {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+        .test-case.fail {
+            background: #FEE2E2;
+            color: #991B1B;
+        }
+        .test-case .status {
+            font-weight: 600;
+            min-width: 50px;
+        }
+        .test-summary {
+            padding: 16px;
+            border-radius: var(--radius-md);
+            margin-bottom: 24px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .test-summary.all-pass {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+        .test-summary.has-fail {
+            background: #FEE2E2;
+            color: #991B1B;
+        }
+        .test-error {
+            font-size: 12px;
+            margin-left: 60px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .test-btn {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 style="margin-bottom:20px;">🧪 个人工作台 - 功能测试</h1>
+
+        <div style="margin-bottom:20px;">
+            <button class="btn btn-primary test-btn" id="runAllBtn">运行所有测试</button>
+            <button class="btn test-btn" id="runPhase1Btn">阶段1: 基础框架</button>
+            <button class="btn test-btn" id="runPhase2Btn">阶段2: 数据与设置</button>
+            <button class="btn test-btn" id="runPhase3Btn">阶段3: 每周计划</button>
+            <button class="btn test-btn" id="runPhase4Btn">阶段4: 任务汇总</button>
+            <button class="btn test-btn" id="runPhase5Btn">阶段5: 健康计划</button>
+            <button class="btn test-btn" id="runPhase6Btn">阶段6: 饮食计划</button>
+            <button class="btn test-btn" id="runPhase7Btn">阶段7: 问题思考</button>
+            <button class="btn test-btn" id="runPhase8Btn">阶段8: 信息整理</button>
+            <button class="btn test-btn" id="runPhase9Btn">阶段9: 开发工作</button>
+            <button class="btn test-btn" id="runPhase10Btn">阶段10: 物品说明</button>
+            <button class="btn test-btn" id="runPhase11Btn">阶段11: 物品收纳</button>
+            <button class="btn test-btn" id="runPhase12Btn">阶段12: 首页总览</button>
+            <button class="btn test-btn" id="clearTestDataBtn">清空测试数据</button>
+            <a class="btn" href="index.html" target="_blank">打开主应用</a>
+        </div>
+
+        <div id="summary" class="test-summary">
+            点击"运行所有测试"开始
+        </div>
+
+        <div id="results"></div>
+    </div>
+
+    <div id="toastContainer"></div>
+    <div id="modalContainer"></div>
+
+    <script src="js/db.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/modules/settings.js"></script>
+    <script src="js/modules/weekly.js"></script>
+    <script src="js/modules/tasks.js"></script>
+    <script src="js/modules/health.js"></script>
+    <script src="js/modules/diet.js"></script>
+    <script src="js/modules/knowledge.js"></script>
+    <script src="js/modules/info.js"></script>
+    <script src="js/modules/dev.js"></script>
+    <script src="js/modules/items.js"></script>
+    <script src="js/modules/storage.js"></script>
+    <script src="js/modules/home.js"></script>
+    <script src="js/tests.js"></script>
+</body>
+</html>
